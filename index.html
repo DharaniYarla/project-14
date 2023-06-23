@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="word">DHARANI</div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("mousemove", rotateWord);
+      });
+
+      function rotateWord(event) {
+        var word = document.getElementById("word");
+        var x = event.clientX - window.innerWidth / 2;
+        var y = event.clientY - window.innerHeight / 2;
+        var rotation = Math.atan2(y, x) * (180 / Math.PI);
+
+        word.style.transform =
+          "translate(-50%, -50%) rotate(" + rotation + "deg)";
+      }
+    </script>
+  </body>
+</html>
