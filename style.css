@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+#word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  user-select: none;
+  color: white;
+}
